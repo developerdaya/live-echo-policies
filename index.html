@@ -13,11 +13,29 @@
       background: #f9f9f9;
       color: #333;
     }
-    header {
-      background: #4a90e2;
-      color: #fff;
-      padding: 15px 20px;
-      text-align: center;
+header {
+  background: linear-gradient(135deg, #2c2c2c, #b3b3b3);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* dark overlay for text readability */
+    }
+    header h1, header p, header img {
+      position: relative;
+      z-index: 1;
+    }
+    header img {
+      width: 120px;
+      height: auto;
+      border-radius: 20px;
+      margin-bottom: 15px;
     }
     nav {
       background: #333;
@@ -54,15 +72,17 @@
 </head>
 <body>
   <header>
-    <h1>🎤 Live Echo : Voice Effects 🎶</h1>
-    <p>Karaoke Voice Effects App</p>
+    <img src="https://play-lh.googleusercontent.com/fMk2rM2nZttWGv-RPPbLwqiZ7a0Sk8-ahcWgAcoC8VdhpMd2OQiTVzd8HsIMMSIANhaT=w240-h480-rw" alt="Live Echo Logo">
+     <h1 style="color:#fff; position:relative; z-index:1;">🎤 Live Echo : Voice Effects 🎶</h1>
   </header>
 
   <nav>
+    <a href="index.html">Home</a>
     <a href="terms.html">Terms & Conditions</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="refund.html">Refund Policy</a>
     <a href="cancellation.html">Cancellation Policy</a>
+    <a href="shipping.html">Shipping & Exchange</a>
     <a href="contact.html">Contact Us</a>
   </nav>
 
